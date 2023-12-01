@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성결대 병원</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1><img src="sku.svg" alt="성결대학교 로고" width="60" height="60">성결대 병원</h1>
+    <div class="form-container">
+        <h2>진료 예약</h2>
+        <form action="reservation.php" method="POST">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="date">날짜</label>
+            <input type="date" id="date" name="date" required><br>
+
+            <label for="time">시간</label>
+            <input type="time" id="time" name="time" required><br>
+
+            <label for="phone">핸드폰 번호</label>
+            <input type="tel" id="phone" name="phone" placeholder="010-1234-5678" required><br>
+
+            <input type="submit" value="예약">
+        </form>
+    </div>
+
+    <div class="form-container">
+        <h2>진료 예약 조회</h2>
+        <form action="reservation_check.php" method="GET">
+            <label for="reservation-number">예약 번호</label>
+            <input type="text" id="reservation-number" name="reservation-number" required><br>
+
+            <input type="submit" value="예약 확인">
+        </form>
+    </div>
+</body>
+</html>
